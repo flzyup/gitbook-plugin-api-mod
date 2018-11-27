@@ -1,0 +1,51 @@
+{
+  "name": "gitbook-plugin-api-mod",
+  "version": "1.0.1",
+  "author": {
+    "name": "Yonnie Lu "
+  },
+  "description": "API Documentation plugin for GitBook, An mod version from https://github.com/MagLoft/gitbook-plugin-api",
+  "bugs": {
+    "url": "https://github.com/flzyup/gitbook-plugin-api-mod/issues"
+  },
+  "dependencies": {
+    "html-element": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "directories": {},
+  "engines": {
+    "gitbook": ">2.0.0"
+  },
+  "homepage": "https://github.com/flzyup/gitbook-plugin-api-mod#readme",
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "api",
+    "documentation"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "yonnie.lu.inc@gmail.com",
+      "name": "Yonnie Lu"
+    }
+  ],
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flzyup/gitbook-plugin-api-mod.git"
+  },
+  "scripts": {
+    "lint": "eslint index.js"
+  }
+}
