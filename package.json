@@ -24,6 +24,15 @@
   "engines": {
     "gitbook": ">2.0.0"
   },
+  "gitbook": {
+    "properties": {
+      "expanded": {
+        "type": "bool",
+        "default": false,
+        "description": "Whether expand each api item or not"
+      }
+    }
+  },
   "homepage": "https://github.com/flzyup/gitbook-plugin-api-mod#readme",
   "keywords": [
     "gitbook",

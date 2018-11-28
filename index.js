@@ -22,6 +22,12 @@ function element (tag, options, container) {
   return el
 }
 
+/* get config by properties */
+function getConfig(context, property, defaultValue) {
+  var config = context.config ? /* 3.x */ context.config : /* 2.x */ context.book.config;
+  return config.get(property, defaultValue);
+}
+
 module.exports = {
   book: {
     assets: './assets',
@@ -32,15 +38,18 @@ module.exports = {
   blocks: {
     api: {
       process (block) {
-        return this.book.renderBlock('markdown', block.body).then(function (body) {
+        var expand = getConfig(this, 'pluginsConfig.api-mod.expanded', false)
+
+        return this.renderBlock('markdown', block.body).then(function (body) {
           // Create container
-          const container = element('div', { class: 'api-container' })
+          const container =  element('div', { class: !expand ? 'api-container' : 'api-container expanded' })
 
           // Create header
           const header = element('div', { class: 'api-header' }, container)
           if (block.kwargs.method) { element('small', { text: block.kwargs.method, class: block.kwargs.method.toLowerCase() }, header) }
-          element('h2', { text: block.args[0] }, header)
+
           if (block.kwargs.url) { element('span', { text: block.kwargs.url }, header) }
+          element('h2', { text: block.args[0] }, header)
 
           // Create content section
           const content = element('div', { class: 'api-content' }, container)

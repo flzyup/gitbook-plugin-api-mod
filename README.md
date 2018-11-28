@@ -9,6 +9,11 @@ This plugins requires gitbook `>=2.0.0`.
 Thanks for **Tobias Strebitzer** bringing this awesome plugin
 
 ## Changelog
+### v1.0.2
+- Move url/method definition on the left of h2(api name)
+- Some little bit style update
+- You can config the api item to expand or not now
+
 ### v1.0.1
 - Update README.md
 
@@ -21,13 +26,15 @@ Thanks for **Tobias Strebitzer** bringing this awesome plugin
 
 ## Installation
 
-Add the plugin to your `book.json`, then run `gitbook install`:
-
+Add the plugin to your `book.json`, edit `book.json`, add plugin
 ```
 {
-    plugins: ["api-mod"]
+  "plugins": ["api-mod"]
 }
 ```
+
+then run `gitbook install`:
+
 
 You can now start writing API documentation:
 
@@ -56,3 +63,23 @@ You can now start writing API documentation:
     ```
 
     {% endapi %}
+
+## Configuration
+You can edit `book.json` for this plugin configuration:
+
+- Expand api items or not by default
+
+The default value is false, you can enable it as the following:
+
+```
+{
+  "plugins": ["api-mod"],
+  "pluginsConfig": {
+    "api-mod": {
+      "expanded": true
+    }
+  }
+}
+```
+
+This will expand all api items by default
