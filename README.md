@@ -8,6 +8,8 @@ This plugins requires gitbook `>=2.0.0`.
 
 Thanks for **Tobias Strebitzer** bringing this awesome plugin
 
+**<font color="blue">You can submit request features you want on issue page!</font>**
+
 ## Changelog
 ### v1.0.4
 - Update and fix README.md
