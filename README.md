@@ -9,6 +9,9 @@ This plugins requires gitbook `>=2.0.0`.
 Thanks for **Tobias Strebitzer** bringing this awesome plugin
 
 ## Changelog
+### v1.0.4
+- Update and fix README.md
+
 ### v1.0.3
 - Add support line break when using `url` param
 - Also you can specify how many spaces will automatically add when using line break in `url`, please refer configuration
@@ -99,8 +102,6 @@ This will expand all api items by default
 }
 ```
 You can add as you want!
-
-**Example:**
 
 Before:
 
