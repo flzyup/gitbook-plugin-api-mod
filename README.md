@@ -9,6 +9,10 @@ This plugins requires gitbook `>=2.0.0`.
 Thanks for **Tobias Strebitzer** bringing this awesome plugin
 
 ## Changelog
+### v1.0.3
+- Add support line break when using `url` param
+- Also you can specify how many spaces will automatically add when using line break in `url`, please refer configuration
+
 ### v1.0.2
 - Move url/method definition on the left of h2(api name)
 - Some little bit style update
@@ -81,5 +85,39 @@ The default value is false, you can enable it as the following:
   }
 }
 ```
-
 This will expand all api items by default
+
+- Specify how many spaces will automatically add when using line break in `url`
+```
+{
+  "plugins": ["api-mod"],
+  "pluginsConfig": {
+    "api-mod": {
+      "url-break-line-indent-spaces": 4
+    }
+  }
+}
+```
+You can add as you want!
+
+**Example:**
+Before:
+
+    {% api "Test method", url="test(param1, param2, param3, param4, param5, param6)" %}
+    Test long params method
+
+
+    {% endapi %}
+
+![image][https://i4o.xyz/wp-content/uploads/2018/11/1.png]
+
+After:
+Add `<br>` or `<br/>` in `url` as you like, config the `url-break-line-indent-spaces`
+
+    {% api "Test method", url="test(param1, param2, param3, <br>param4, param5, param6)" %}
+    Test long params method
+
+
+    {% endapi %}
+
+![image][https://i4o.xyz/wp-content/uploads/2018/11/2.png]

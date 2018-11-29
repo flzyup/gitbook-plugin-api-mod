@@ -39,6 +39,7 @@ module.exports = {
     api: {
       process (block) {
         var expand = getConfig(this, 'pluginsConfig.api-mod.expanded', false)
+        var numOfBreakLineSpaces = getConfig(this, 'pluginsConfig.api-mod.url-break-line-indent-spaces', 0)
 
         return this.renderBlock('markdown', block.body).then(function (body) {
           // Create container
@@ -48,7 +49,21 @@ module.exports = {
           const header = element('div', { class: 'api-header' }, container)
           if (block.kwargs.method) { element('small', { text: block.kwargs.method, class: block.kwargs.method.toLowerCase() }, header) }
 
-          if (block.kwargs.url) { element('span', { text: block.kwargs.url }, header) }
+          if (block.kwargs.url) {
+            if (block.kwargs.url.includes('<br>') > -1 ||  block.kwargs.url.includes('<br/>') > -1) {
+              var html = block.kwargs.url
+              if (numOfBreakLineSpaces > 0) {
+                var spaces = ''
+                for (var i = 0; i < numOfBreakLineSpaces; i++) {
+                  spaces = spaces.concat('&nbsp;')
+                }
+                html = html.replace(/<br ?\/?>/g, '<br>' + spaces)
+              }
+              element('span', { html }, header)
+            } else {
+              element('span', { text: block.kwargs.url }, header)
+            }
+          }
           element('h2', { text: block.args[0] }, header)
 
           // Create content section

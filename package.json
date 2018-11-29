@@ -27,9 +27,14 @@
   "gitbook": {
     "properties": {
       "expanded": {
-        "type": "bool",
+        "type": "Boolean",
         "default": false,
         "description": "Whether expand each api item or not"
+      },
+      "url-break-line-indent-spaces": {
+        "type": "Number",
+        "default": 0,
+        "description": "Add how many spaces when line break the url"
       }
     }
   },
