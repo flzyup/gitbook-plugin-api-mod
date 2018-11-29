@@ -109,7 +109,7 @@ Before:
 
     {% endapi %}
 
-![image][https://i4o.xyz/wp-content/uploads/2018/11/1.png]
+![image](https://i4o.xyz/wp-content/uploads/2018/11/1.png)
 
 After:
 Add `<br>` or `<br/>` in `url` as you like, config the `url-break-line-indent-spaces`
@@ -120,4 +120,4 @@ Add `<br>` or `<br/>` in `url` as you like, config the `url-break-line-indent-sp
 
     {% endapi %}
 
-![image][https://i4o.xyz/wp-content/uploads/2018/11/2.png]
+![image](https://i4o.xyz/wp-content/uploads/2018/11/2.png)
