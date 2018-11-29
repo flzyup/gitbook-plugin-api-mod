@@ -71,7 +71,7 @@ You can now start writing API documentation:
 ## Configuration
 You can edit `book.json` for this plugin configuration:
 
-- Expand api items or not by default
+### Expand api items or not by default
 
 The default value is false, you can enable it as the following:
 
@@ -87,7 +87,7 @@ The default value is false, you can enable it as the following:
 ```
 This will expand all api items by default
 
-- Specify how many spaces will automatically add when using line break in `url`
+### Specify how many spaces will automatically add when using line break in `url`
 ```
 {
   "plugins": ["api-mod"],
@@ -101,6 +101,7 @@ This will expand all api items by default
 You can add as you want!
 
 **Example:**
+
 Before:
 
     {% api "Test method", url="test(param1, param2, param3, param4, param5, param6)" %}
@@ -112,6 +113,7 @@ Before:
 ![image](https://i4o.xyz/wp-content/uploads/2018/11/1.png)
 
 After:
+
 Add `<br>` or `<br/>` in `url` as you like, config the `url-break-line-indent-spaces`
 
     {% api "Test method", url="test(param1, param2, param3, <br>param4, param5, param6)" %}
