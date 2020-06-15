@@ -19,44 +19,53 @@
   border-bottom: 1px solid #EEEEEE;
   cursor: pointer;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .api-container .api-header small {
-  background-color: #444444;
-  background-image: linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-color: #555555;
+  border-radius: 4px;
+  /* background-image: linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(0, 0, 0, 0.1) 50%); */
   color: #FFFFFF;
-  font-size: 9px !important;
-  margin-right: 8px;
+  font-size: 12px !important;
+  margin-left: 8px;
   padding: 0px 4px;
-  font-weight: bold;
-  display: block;
-  line-height: 28px;
-  height: 28px;
-  width: 46px;
+  /* font-weight: bold; */
+  display: inline-block;
+  line-height: 22px;
+  height: 22px;
+  min-width: 46px;
   text-align: center;
 }
 
 .api-container .api-header small.get {
-  background-color: #226ca0;
+  background-color: #1E5AF0;
 }
 
 .api-container .api-header small.put {
-  background-color: #a08022;
+  background-color: #FEAF16;
 }
 
 .api-container .api-header small.post {
-  background-color: #46a022;
+  background-color: #02CF74;
 }
 
 .api-container .api-header small.delete {
-  background-color: #a02222;
+  background-color: #FF3B30;
+}
+
+.api-container .api-header small.new {
+  background-color: #02CF74;
+}
+
+.api-container .api-header small.deprecated {
+  background-color: #999999;
 }
 
 .api-container .api-header h2 {
-  display: block;
+  /* display: block; */
   flex: 1;
-  text-align: right;
+  /* text-align: right; */
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -67,12 +76,12 @@
 }
 
 .api-container .api-header span {
-  display: block;
+  /* display: block; */
   color: #008cff;
   font-size: 15px;
   font-weight: bold;
   /* letter-spacing: 0.5px; */
-  padding: 0px 8px;
+  /* padding: 0px 8px; */
   /* border: 1px solid #ddd; */
   white-space: nowrap;
   overflow: hidden;

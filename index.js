@@ -47,7 +47,8 @@ module.exports = {
 
           // Create header
           const header = element('div', { class: 'api-header' }, container)
-          if (block.kwargs.method) { element('small', { text: block.kwargs.method, class: block.kwargs.method.toLowerCase() }, header) }
+          
+          const method = element('div', { class: 'api-method' }, header)
 
           if (block.kwargs.url) {
             if (block.kwargs.url.includes('<br>') > -1 ||  block.kwargs.url.includes('<br/>') > -1) {
@@ -59,11 +60,19 @@ module.exports = {
                 }
                 html = html.replace(/<br ?\/?>/g, '<br>' + spaces)
               }
-              element('span', { html }, header)
+              element('span', { html }, method)
             } else {
-              element('span', { text: block.kwargs.url }, header)
+              element('span', { text: block.kwargs.url }, method)
             }
           }
+          if (block.kwargs.method) { 
+            var cls = block.kwargs.method.toLowerCase()
+            if (block.kwargs.tag) {
+              cls += ' ' + block.kwargs.tag.toLowerCase()
+            }
+            element('small', { text: block.kwargs.method, class: cls }, method) 
+          }
+
           element('h2', { text: block.args[0] }, header)
 
           // Create content section
