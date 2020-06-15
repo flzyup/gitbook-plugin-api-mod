@@ -11,7 +11,7 @@ Thanks for **Tobias Strebitzer** bringing this awesome plugin
 **<font color="blue">You can submit request features you want on issue page!</font>**
 
 ## Changelog
-### v1.0.6
+### v1.0.7
 - `api` add `tag` style support, currently support: `new`, `deprecated` tag, `new` tag is stylized with green background color and `deprecated` will be stylized with gray background
 - `url` with `method` will be in the first row while the corresponding description will be in the second row for each `api`
 
